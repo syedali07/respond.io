@@ -1,23 +1,24 @@
 import {test, expect} from '@playwright/test';
-import { Env } from '../files/Env';
+import dotenv from 'dotenv';
 import { LoginPage } from '../pages/Login';
 import { DashboardPage } from '../pages/Dashboard';
 import { ProfilePage } from '../pages/Profile';
 import { Workspaces } from '../pages/Workspaces';
 
 test.beforeEach(async ({page}) => {
-
-    await page.goto('https://app.respond.io/user/login')
+    dotenv.config();
+    await page.goto(process.env.baseURL)
 })
 
 test('Login Success', async ({page}) => {
     
+    dotenv.config();
     const loginPage = new LoginPage(page)
     const dashboardPage = new DashboardPage(page)
     const profilePage = new ProfilePage(page)
     
     await loginPage.validatePageTitle()
-    await loginPage.login("syedmuhammadali1337@gmail.com", "Somepassword!1")
+    await loginPage.login(process.env.user_name, process.env.password)
     
     if (await dashboardPage.checkUserIsAtDashboard()) {
         //Asserting successful login
@@ -30,12 +31,13 @@ test('Login Success', async ({page}) => {
 
 test('Add User Workspace Successfully', async ({page}) => {
 
+    dotenv.config();
     const loginPage = new LoginPage(page)
     const dashboardPage = new DashboardPage(page)
     const profilePage = new ProfilePage(page)
     const workspace = new Workspaces(page)
 
-    await loginPage.login("syedmuhammadali1337@gmail.com", "Somepassword!1")
+    await loginPage.login(process.env.user_name, process.env.password)
 
     if (await dashboardPage.checkUserIsAtDashboard()) {
         
