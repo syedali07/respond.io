@@ -22,12 +22,13 @@ Setup Instructions
     There is a branch in it with the name of API_Automation_Postman that includes the API automation
 
 2. Install Dependencies
+    Open this Node.js project(folder) into VSCode or any IDE
     To install necessary Node.js dependencies, run: npm install dotenv --save
 
 3. Install Newman
     If Newman is not installed globally, you can install it using:
     npm install -g newman
-    Link newman in the node.js project npm link newman
+    Link newman in the node.js project using this command: npm link newman
 
 4. Import Postman Collections (Optional)
     Postman Collection: Import the provided Postman collection (Respond.io.postman_collection.json) into Postman to view and edit test cases. You can find this collection in the root of the project directory
@@ -39,6 +40,7 @@ Setup Instructions
 
 6. Running API Tests Locally
     You can execute the Postman collection locally using "node test.js"
+    
     (Optional)You can execute the Postman collection locally using Newman via the following command:
     newman run <path-to-collection> -e <path-to-environment-file>
 
@@ -52,6 +54,8 @@ Setup Instructions
     ├── test.js                                 # Contains a script with newman library to run the postman collection
 
 8. Reporting
+    If you are running from this project using node test.js then the reports are saved under the newman folder(can be found in the root of the project)
+    
     Newman generates reports in various formats such as JSON, HTML, and JUnit. You can configure the format based on your preference.
 
     To generate an HTML report:
