@@ -23,7 +23,7 @@ Setup Instructions
 
 2. Install Dependencies
     Open this Node.js project(folder) into VSCode or any IDE
-    To install necessary Node.js dependencies, run: npm install dotenv --save
+    To install necessary Node.js dependencies, run:
 
 3. Install Newman
     If Newman is not installed globally, you can install it using:
