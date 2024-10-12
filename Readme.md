@@ -18,7 +18,7 @@ Pre-requisites
 Setup Instructions
 1. Clone the Repository
     git clone git@github.com:syedali07/respond.io.git
-    repository-GitHub-Link https://github.com/syedali07/respond.io/tree/API_Automation_Postman
+    repository-GitHub-Link https://github.com/syedali07/respond.io/tree/API_Automation
     There is a branch in it with the name of API_Automation_Postman that includes the API automation
 
 2. Install Dependencies
