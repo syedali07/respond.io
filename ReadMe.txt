@@ -57,7 +57,7 @@ You can execute tests with the following commands:
     ├── playwright-reports/       # Generated test reports
 
 7. Reporting
-- By default, Playwright generates HTML reports after the tests finish. You can view them by running:
+- By default, Playwright generates HTML reports after the tests finish and can be found in playwright-report folder. You can view them by running:
     npx playwright show-report
 
 8. Troubleshooting
