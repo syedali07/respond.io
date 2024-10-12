@@ -39,7 +39,7 @@ Setup Instructions
     Collection Variables: Used to store dynamic data such as authentication tokens, environment-specific URLs, and credentials. Variables are email and password.
 
 6. Running API Tests Locally
-    You can execute the Postman collection locally using "node test.js"
+    Set the credentails in email and password variables in the collection variable then you can execute the Postman collection locally using "node test.js"
     
     (Optional)You can execute the Postman collection locally using Newman via the following command:
     newman run <path-to-collection> -e <path-to-environment-file>
